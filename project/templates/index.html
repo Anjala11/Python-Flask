@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Finance - Fixed Deposit
+{% endblock %}
+
+{% block main %}
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-lg-12">
+      <table align="center" id="rate-table">
+        <tr><th>Days</th><th>Rates</th></tr>
+        <tr><td>Upto 30 days</td><td>5%</td></tr>
+        <tr><td>Upto 50 days</td><td>5.5%</td></tr>
+        <tr><td>Upto 60 days</td><td>5.75%</td></tr>
+        <tr><td>Upto 75 days</td><td>6%</td></tr>
+        <tr><td>Upto 90 days</td><td>6.5%</td></tr>
+        <tr><td>Upto 1 year</td><td>7.25%</td></tr>
+        <tr><td>Upto 2 years</td><td>7.75%</td></tr>
+        <tr><td>Upto 5 years</td><td>7%</td></tr>
+      </table>
+    </div>
+  </div>
+{% endblock %}

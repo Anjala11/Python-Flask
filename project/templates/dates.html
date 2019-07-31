@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Determine Maturity Dates and Days
+{% endblock %}
+
+{% block main %}
+<form method="post" id="dates_form" autocomplete="off" action="/dates" onsubmit="return matur()">
+  <table align="center" id="dates-table">
+    <tr>
+      <td><b><u>Date</u></b></td>
+      <td><b><u>Month</u></b></td>
+      <td><b><u>Year</u></b></td>
+    </tr>
+    <tr>
+      <td>
+        <select required name="which_date" id="w_date">
+          <option>Days</option>
+          {% for i in range(31) %}
+          <option>{{ i + 1 }}</option>
+          {% endfor %}
+        </select>
+      </td>
+      <td>
+        <select required name="which_month" id="w_month">
+          <option>Months</option>
+          {% for i in range(12) %}
+          <option>{{ i + 1 }}</option>
+          {% endfor %}
+        </select>
+      </td>
+      <td>
+        <select required name="which_year" id="w_year">
+          <option>Years</option>
+          {% for i in range(40) %}
+          <option>{{ 1980 + i }}</option>
+          {% endfor %}
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><label><b><u>Time Period</u></b></label></td>
+      <td><input type="text" required name="num_days" id="number_of_days"/></td>
+      <td> 
+        <select name="dmy" id="dmy" required>
+           <option>Days</option>
+           <option>Month(s)</option>
+           <option>Year(s)</option>
+         </select>
+      </td>
+    </tr>
+    <tr><td colspan="3"><div id="error_msg">&nbsp;</div></td></tr>
+    <tr><td colspan="3"><input type="submit" id="matur_dates" value="Maturity Dates"/></td></tr>
+    <tr>
+      <td><label><b><u>Maturity Dates and Days</u></b></label</td>
+      <td colspan="2"><div id="res_matur"></div></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

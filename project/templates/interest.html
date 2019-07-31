@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Calculate Interest
+{% endblock %}
+
+{% block main %}
+  <form action="/interest" autocomplete="off" method="post" id="form1" onsubmit="return calcul()">
+    <table align="center" id="interest-table">
+      <tr>
+          <td><label><b><u>Enter the amount (in Rs.)</u></b></label></td>
+          <td><input type="text" name="principal" id="amt" onkeypress="return isNumber(event)" autofocus required></td>
+          <td colspan="2"><div id="amt_err">&nbsp;</div></td>
+      </tr>
+      <tr>
+        <td><label><b><u>Select Interest days</u></b></label></td>
+        <td>
+          <select onchange="check()" id="sel_days" name="select_days" required>
+            <option>Select Days</option>
+            <option value="5">Upto 30 days</option>
+            <option value="5.5">Upto 50 days</option>
+            <option value="5.75">Upto 60 days</option>
+            <option value="6">Upto 75 days</option>
+            <option value="6.5">Upto 90 days</option>
+            <option value="7.25">Upto 1 year</option>
+            <option value="7.75">Upto 2 years</option>
+            <option value="7">Upto 5 years</option>        
+          </select>
+        </td>
+        <td><label><b><u>Corresponding rate(%) is</u></b></label></td>
+        <td colspan="3"><input type="text" id="rate_value" name="rates" required></td>
+      </tr>
+      <tr>
+        <td><label><b><u>Enter Time Period</u></b></label></td>
+        <td colspan="2"><input type="text" name="no_of_days" id="no_days" onkeypress="return isNumber(event);" required></td>
+        <td>
+          <select name="period_type" id="period_type" required>
+            <option>Days</option>
+            <option>Month(s)</option>
+            <option>Year(s)</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><label><b><u>Rate (in %) for your desired input days</u></b></label></td>
+        <td colspan="2"><input type="text" id="rate_of_inpdays"></td>
+      </tr>
+      <tr>
+        <td colspan="4"><input type="submit" id="calc_intr" value="Calculate Interest"/></td>
+      </tr>
+      <tr>
+        <td><label><b><u>Interest Obtained</u></b></label></td>
+        <td colspan="3"><input type="text" id="intr"></td>
+      </tr>
+      <tr>
+        <td><label><b><u>Amount at Maturity</u></b></label></td>
+        <td colspan="3"><input type="text" id="amt_at_matr"></td>
+      </tr>
+    </table>
+  </form>
+{% endblock %}

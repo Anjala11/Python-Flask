@@ -1,0 +1,102 @@
+html, body
+{
+  height: 100%;
+  width: 100%;
+}
+body
+{
+  background-color: burlywood;
+  color: cornsilk;
+}
+div.container
+{
+  text-align: center;
+}
+.col-sm-12, .col-md-12, .col-lg-12
+{
+  text-align: center;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+#heading
+{
+  font-size: 40px;
+  font-weight: bold;
+  color: cornsilk;
+  padding: 2px;
+}
+#page-heading
+{
+  font-size: 28px;
+  color: cornsilk;
+  padding: 5px;
+  padding-bottom: 15px;
+}
+
+.hlinks
+{
+  text-decoration: none;
+  color: cornsilk;
+  font-size: 16px;
+  font-weight: bold;
+}
+.hlinks:hover
+{
+  text-decoration: none;
+  color: cornsilk;
+}
+#links
+{
+  padding-bottom: 30px;
+}
+
+table#rate-table
+{
+  border: 10px solid cornsilk;
+}
+table#rate-table th
+{
+  padding: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+table#rate-table td
+{
+  padding: 15px;
+}
+
+table#interest-table td
+{
+  padding: 15px;
+  width: 400px;
+  height: 100px;
+}
+
+div#amt_err
+{
+  color: crimson;
+  width: 500px;
+}
+
+div#res_matur
+{
+  color: teal;
+  height: 40px;
+}
+
+table, th, td, tr
+{
+  border: 5px solid cornsilk;
+}
+
+table#dates-table td
+{
+  padding: 15px;
+}
+
+div#error_msg
+{
+  color: crimson;
+  height: 30px;
+}

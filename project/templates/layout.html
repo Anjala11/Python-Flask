@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link type="text/css" href="/static/style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/script.js"></script>    
+    <script type="text/javascript" src="/static/ajscript.js"></script>
+    <script type="text/javascript" src="/static/bscript.js"></script>
+    <script type="text/javascript" src="/static/cscript.js"></script>
+    <title>EASY FINANCE</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12" id="heading">EASY FINANCE</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12" id="page-heading">
+          {% block title %} {% endblock %}
+        </div>
+      </div>
+      <div class="row" id="links">
+        <div class="col-sm-12 col-md-4 col-lg-4"><a href="{{ url_for('index') }}" class="hlinks">Homepage</a></div>
+        <div class="col-sm-12 col-md-4 col-lg-4"><a href="{{ url_for('interest_calc') }}" class="hlinks">Interest Calculation</a></div>
+        <div class="col-sm-12 col-md-4 col-lg-4"><a href="{{ url_for('dates') }}" class="hlinks">Days and Dates</a></div>
+      </div>
+      <div>
+        {% block main %} {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
